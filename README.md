@@ -9,13 +9,13 @@ repo is that classifier, run, calibrated, and validated against the same 173 mee
 Full write-up (why this exists, what it fixes, what it doesn't):
 **[Reading the SARB With an LLM: Context Always Matters](https://mateusgodinho.github.io/articles/sarb-llm-index)**.
 
-**Just want to try the method, no setup?** [`streamlit_app/`](streamlit_app/) is a public
-web demo: paste any central-bank text and see it scored both ways, side by side (the
-dictionary method and this one) — see [Try it yourself](#try-it-yourself-no-python-required)
-below. (A [Claude Artifact version](https://claude.ai/code/artifact/b905c07a-f730-44f9-b705-f38de8bd6fff)
-of the LLM reader also exists, but Anthropic's sharing rules don't let artifacts that call
-Claude be shared with "anyone with the link" — the Streamlit demo is the actual public
-option.)
+**Just want to try the method, no setup?** [Live demo](https://sarb-hawkish-dove-llm-59qcmhguxqvpvab9kldq2q.streamlit.app/) --
+paste any central-bank text and see it scored both ways, side by side (the dictionary
+method and this one). Source: [`streamlit_app/`](streamlit_app/) — see [Try it
+yourself](#try-it-yourself-no-python-required) below. (A [Claude Artifact
+version](https://claude.ai/code/artifact/b905c07a-f730-44f9-b705-f38de8bd6fff) of the LLM
+reader also exists, but Anthropic's sharing rules don't let artifacts that call Claude be
+shared with "anyone with the link" — the Streamlit demo is the actual public option.)
 
 ## Abstract
 
@@ -151,6 +151,7 @@ python score_llm.py --fetch <BATCH_ID>            # pull results once the batch 
 
 ## Try it yourself, no Python required
 
+Live: [sarb-hawkish-dove-llm-59qcmhguxqvpvab9kldq2q.streamlit.app](https://sarb-hawkish-dove-llm-59qcmhguxqvpvab9kldq2q.streamlit.app/).
 [`streamlit_app/`](streamlit_app/) is a small web app: paste in a paragraph from any
 central bank (an FOMC statement, an ECB speech, anything), click a button, and see it
 scored hawkish/dovish two ways side by side — the Henry dictionary (always on) and the
