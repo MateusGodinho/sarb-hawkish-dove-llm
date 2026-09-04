@@ -1,0 +1,19 @@
+[
+  {"id": "stmt_2002-01-15", "type": "statement", "file": "data/raw_texts/2002-01-15_4323.txt", "henry_index": 1.4084, "why": "hawkish extreme, aftermath of 2001 rand collapse"},
+  {"id": "stmt_2002-09-12", "type": "statement", "file": "data/raw_texts/2002-09-12_4320.txt", "henry_index": 1.4286, "why": "hawkish extreme, same episode"},
+  {"id": "stmt_2009-02-05", "type": "statement", "file": "data/raw_texts/2009-02-05_3389.txt", "henry_index": -0.2424, "why": "dovish extreme, GFC cutting cycle"},
+  {"id": "stmt_2019-11-21", "type": "statement", "file": "data/raw_texts/2019-11-21_9594.txt", "henry_index": -0.2588, "why": "dovish extreme, pre-pandemic growth-driven cuts"},
+  {"id": "stmt_2020-05-21", "type": "statement", "file": "data/raw_texts/2020-05-21_9946.txt", "henry_index": -0.1961, "why": "dovish extreme, pandemic emergency cut"},
+  {"id": "stmt_2013-01-24", "type": "statement", "file": "data/raw_texts/2013-01-24_5478.txt", "henry_index": 0.487, "why": "near sample average, hold"},
+  {"id": "stmt_2026-07-23", "type": "statement", "file": "data/raw_texts/2026-07-23_july.txt", "henry_index": 0.7779, "why": "the meeting that motivated the whole project -- 4-2 vote, hold despite hawkish tone"},
+
+  {"id": "sp_2009-05-20", "type": "speech", "file": "data/raw_texts/speeches/2009-05-20_56.txt", "henry_index": -0.3797, "why": "dovish extreme, Mboweni, GFC"},
+  {"id": "sp_2025-11-27", "type": "speech", "file": "data/raw_texts/speeches/2025-11-27_tshazibana-aacb-green-finance.txt", "henry_index": -0.4, "why": "scores dovish by Henry but is a green-finance speech, not really about policy stance -- tests on_topic flagging"},
+  {"id": "sp_2023-05-04", "type": "speech", "file": "data/raw_texts/speeches/2023-05-04_An-address-by-Lesetja-Kganyago-SARB-Governor-at-the-launch-of-the-upgraded-banknotes-and-coin.txt", "henry_index": 2.0, "why": "hawkish extreme by Henry, but it's a banknote-launch speech -- also tests on_topic flagging"},
+  {"id": "sp_1996-04-25", "type": "speech", "file": "data/raw_texts/speeches/1996-04-25_297.txt", "henry_index": 2.0, "why": "hawkish extreme, historical (Stals era)"},
+  {"id": "sp_2025-08-08", "type": "speech", "file": "data/raw_texts/speeches/2025-08-08_kganyago-address-agm-105.txt", "henry_index": 0.7097, "why": "recent, near speeches-average tone, AGM address"},
+  {"id": "sp_1998-07-30", "type": "speech", "file": "data/raw_texts/speeches/1998-07-30_247.txt", "henry_index": 0.7097, "why": "historical, near speeches-average tone"},
+
+  {"id": "trap_growth_weakened", "type": "sentence", "text": "Growth has weakened sharply across most sectors, and the Committee judged that downside risks to the recovery have increased.", "henry_index": null, "why": "Henry would tag 'growth' hawkish and 'increased' hawkish despite the sentence being dovish -- this is the specific failure mode the LLM method exists to fix"},
+  {"id": "trap_risk_hot", "type": "sentence", "text": "The Committee remains concerned about the risk that persistently high inflation becomes entrenched, and judged that policy needs to stay restrictive.", "henry_index": null, "why": "Henry would tag 'risk' dovish despite the sentence being hawkish"}
+]

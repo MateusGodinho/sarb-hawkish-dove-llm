@@ -1,0 +1,11 @@
+# --- LLM scoring (Claude Haiku 4.5, via the Messages Batches API) ---
+anthropic>=0.117
+pydantic>=2.0
+
+# --- Reproducible notebook (optional -- scripts run standalone too) ---
+jupyter>=1.0
+ipykernel>=6.29
+
+# Corpus, Henry (2008) baseline scores, and rate-decision data are included
+# pre-computed in data/ (copied from github.com/MateusGodinho/sarb-hawkish-dove,
+# not recomputed here) -- no scraping or topic-modelling dependencies needed.

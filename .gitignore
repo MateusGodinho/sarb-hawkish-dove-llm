@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+
+# Ephemeral batch-tracking state -- regenerated on every new score_llm.py
+# submit, not needed for reproducibility of the committed results
+data/processed/llm_id_map.json
+data/processed/last_batch_id.txt
