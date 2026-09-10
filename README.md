@@ -169,6 +169,35 @@ The public deployment linked from the article runs on the project owner's own AP
 the visitor's — a shared free demo, so it has a short per-session cooldown between LLM
 calls rather than a hard usage limit.
 
+## Methodology & AI Usage
+
+Like the root project, this one was built with Claude as an active collaborator, not just
+for drafting text:
+
+- **Prompt and rubric design**: the -2..+2 scale, its anchors, and the negation examples
+  were iterated against 15 real documents chosen to span known extremes, plus two
+  hand-built sentences designed to break a word-count method. The Haiku-vs-Sonnet 4.5
+  model choice came down to one differentiating case (the July 2026 meeting) reviewed by
+  hand, not a benchmark score.
+- **Batches API engineering**: two real bugs were hit and fixed before the full run —
+  `custom_id` exceeding the API's 64-character limit for long speech filenames (fixed with
+  short sequential IDs plus a side lookup file), and a first submission that errored on
+  every one of 675 requests from a malformed `output_config` (missing a nesting level),
+  caught by testing one live call before resubmitting.
+- **Charts and the reader demo**: built to match the root project's visual system, then
+  iterated against direct testing — a labelling bug in the reader (score thresholds tuned
+  for a normalized -1..1 scale instead of the actual -2..2 one) was only caught because it
+  was tested live, not assumed correct from the code.
+- **The public Streamlit demo**: filled in a "coming soon" placeholder already present in
+  the root project's `streamlit_app/`, then deployed through a real troubleshooting
+  session (a missing GitHub OAuth repo-access scope, a wrong main-file-path setting, and a
+  stale app-slug cache) resolved interactively rather than guessed at.
+- **Writing**: the article and this README were drafted from verified results and revised
+  through several rounds of direct feedback — including a citation-fidelity check against
+  the primary sources for each paper referenced (full-text verification for two, secondary
+  summaries only for the paper eventually left out of the final draft when that
+  distinction mattered).
+
 ## Known limitations
 
 - **This is one run, not an average of several.** LLM output isn't fully deterministic even
