@@ -153,13 +153,18 @@ def highlight_html(text: str) -> str:
 
 st.set_page_config(page_title="Hawkish/Dovish Classifier", page_icon="🦅", layout="wide")
 
-st.title("🦅 Central Bank Hawkish/Dovish Classifier")
+st.title("🦅 SARB Hawkish/Dovish Classifier")
 st.caption(
-    "Two ways of scoring central bank communication, side by side: the Henry (2008) / "
-    "Erasmus & Hollander (2020) word-count dictionary, and a calibrated LLM (Claude "
-    "Haiku 4.5) that reads for stance in context — both used on the full SARB corpus in a "
-    "[replication of du Rand et al. (2021), extended with an LLM comparison](#) "
-    "([code + data](#))."
+    "Two ways of scoring **SARB** (South African Reserve Bank) communication, side by "
+    "side: the Henry (2008) / Erasmus & Hollander (2020) word-count dictionary, and a "
+    "calibrated LLM (Claude Haiku 4.5) that reads for stance in context — both calibrated "
+    "and validated on the full SARB corpus in a "
+    "[replication of du Rand et al. (2021), extended with an LLM comparison]"
+    "(https://mateusgodinho.github.io/articles/sarb-llm-index) "
+    "([code + data](https://github.com/MateusGodinho/sarb-hawkish-dove-llm)). "
+    "Paste your own SARB statement or speech below — neither method was calibrated on "
+    "other central banks' language, so treat scores on non-SARB text as a rough "
+    "approximation, not a validated read."
 )
 
 col_input, col_examples = st.columns([3, 1])
@@ -172,10 +177,10 @@ with col_examples:
 
 with col_input:
     text = st.text_area(
-        "Paste a statement, speech excerpt, or press release:",
+        "Paste a SARB statement or speech excerpt:",
         key="text_input",
         height=180,
-        placeholder="e.g. an FOMC statement, an ECB press conference excerpt, an MPC statement...",
+        placeholder="e.g. a SARB MPC statement, or a speech excerpt from the Governor or a Deputy Governor...",
     )
 
 analyze = st.button("Analyze", type="primary")
