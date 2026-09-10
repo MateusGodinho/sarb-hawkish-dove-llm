@@ -13,7 +13,8 @@ calibration and validation against the SARB corpus.
 
 This is the demo companion to this project (a sequel to the dictionary-based
 sarb-hawkish-dove repo, replacing the word-count method with a calibrated
-LLM classifier): [link to article] / [link to repo].
+LLM classifier): https://mateusgodinho.github.io/articles/sarb-llm-index /
+https://github.com/MateusGodinho/sarb-hawkish-dove-llm.
 
 Self-contained: only depends on `lexicon_henry.py` and `llm_prompt.py`
 (mirrored from ../scripts/llm_prompt.py) in this same folder, plus
@@ -277,6 +278,9 @@ st.caption(
     "hosted on the project owner's own API usage, shared across everyone trying the demo, "
     "hence the short cooldown between LLM calls. Neither is investment or policy advice, "
     "and neither should be the sole basis for any decision. "
-    "Methodology and full results: [link to article]. Code: [link to repo]. Dictionary "
-    "baseline from the companion project: github.com/MateusGodinho/sarb-hawkish-dove."
+    "Methodology and full results: [Reading the SARB With an LLM]"
+    "(https://mateusgodinho.github.io/articles/sarb-llm-index). "
+    "Code: [sarb-hawkish-dove-llm](https://github.com/MateusGodinho/sarb-hawkish-dove-llm). "
+    "Dictionary baseline from the companion project: "
+    "[sarb-hawkish-dove](https://github.com/MateusGodinho/sarb-hawkish-dove)."
 )
